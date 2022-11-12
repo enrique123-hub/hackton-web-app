@@ -1,5 +1,9 @@
 const { google, speech_v1p1beta1 } = require("googleapis");
 
+module.exports = {
+    "getInfo" : getInfo
+}
+
 
 async function getInfo(){
     const auth = new google.auth.GoogleAuth({
