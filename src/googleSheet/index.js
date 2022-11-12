@@ -1,9 +1,4 @@
-const { google, speech_v1p1beta1 } = require("googleapis");
-
-module.exports = {
-    "getInfo" : getInfo
-}
-
+const { google } = require("googleapis");
 
 async function getInfo(){
     const auth = new google.auth.GoogleAuth({
@@ -19,11 +14,6 @@ async function getInfo(){
 
     const spreadsheetId = "1bGvoqXbhk66iEtWnPZdRPjQGaqxXh_s7alinRp_bwm8";
 
-    const metaData = await googleSheets.spreadsheets.get({
-        auth,
-        spreadsheetId,
-    });
-
     //Get DATA
     const getRows = await googleSheets.spreadsheets.values.get({
         auth,
@@ -33,5 +23,4 @@ async function getInfo(){
     return getRows.data.values;
 }
 
-
-
+export default getInfo();

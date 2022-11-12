@@ -1,5 +1,5 @@
 <script>
-import { POINT_MARKER_ICON_CONFIG } from '../service/mapSettings'
+import { POINT_MARKER_ICON_CONFIG } from '@/service/mapSettings';
 
 export default {
   props: {
@@ -26,7 +26,6 @@ export default {
       map: this.map,
       icon: POINT_MARKER_ICON_CONFIG
     });
-  },
-
+  }
 };
 </script>

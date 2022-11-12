@@ -34,6 +34,7 @@ export default {
       apiKey: this.apiKey
     });
     this.google = googleMapApi;
+    // console.log(this.google)
     this.initializeMap();
   },
 
